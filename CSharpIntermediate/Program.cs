@@ -6,7 +6,25 @@ namespace CSharpIntermediate
     class Program
     {
         static void Main(string[] args)
-        {         
+        {            
+            var customer = new Customer(1);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
+            customer.Id = 1;
+            customer.Name = "John";
+
+            var order = new Order();
+            customer.Orders.Add(order);
+
+            Console.WriteLine(customer.Id);
+            Console.WriteLine(customer.Name);
+            Console.WriteLine(customer.Orders.Count);
+            Console.ReadLine();
+
+        }
+
+        static void UseOutKeywordExample()
+        {
             // Using the Out key word
             int number;
             var result = int.TryParse("123", out number);
@@ -32,7 +50,6 @@ namespace CSharpIntermediate
             {
                 Console.WriteLine("Conversion Failed.");
             }
-                        
         }
 
         static void UseParams()
@@ -68,15 +85,15 @@ namespace CSharpIntermediate
 
         static void CreateCustomer()
         {
-            var customer = new Customer();
-            customer.Id = 1;
-            customer.Name = "John";
+            //var customer = new Customer();
+            //customer.Id = 1;
+            //customer.Name = "John";
 
-            var order = new Order();
-            customer.Orders.Add(order);
+            //var order = new Order();
+            //customer.Orders.Add(order);
 
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
+            //Console.WriteLine(customer.Id);
+            //Console.WriteLine(customer.Name);
         }
     }
 }
