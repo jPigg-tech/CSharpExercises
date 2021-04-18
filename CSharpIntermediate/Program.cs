@@ -17,6 +17,18 @@ namespace CSharpIntermediate
             //Console.WriteLine(customer.Id);
             //Console.WriteLine(customer.Name);
 
+            var calculator = new Calculator();
+            Console.WriteLine(calculator.Add(1, 2));
+            Console.WriteLine(calculator.Add(1, 2, 3));
+            Console.WriteLine(calculator.Add(1, 2, 3, 4));
+            Console.WriteLine(calculator.Add(new int[] {1, 2, 3, 4 }));
+            Console.ReadLine();
+
+            
+        }
+
+        static void UsePoints()
+        {
             try
             {
                 var point = new Point(10, 20);
@@ -32,7 +44,6 @@ namespace CSharpIntermediate
                 Console.WriteLine("An unexpected error occured.");
                 Console.ReadLine();
             }
-            
         }
     }
 }
