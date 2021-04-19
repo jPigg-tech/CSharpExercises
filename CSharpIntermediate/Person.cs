@@ -8,24 +8,38 @@ namespace CSharpIntermediate
 {
     class Person
     {
-        private DateTime _birthdate;
+        //private DateTime _birthdate;
 
-        public void SetBirthdate(DateTime birthdate)
-        {
-            _birthdate = birthdate;
-        }
+        //public void SetBirthdate(DateTime birthdate)
+        //{
+        //    _birthdate = birthdate;
+        //}
 
-        public DateTime GetBirthdate()
-        {
-            return _birthdate;
-        }
+        //public DateTime GetBirthdate()
+        //{
+        //    return _birthdate;
+        //}
 
-        // More efficiently we can create a property (shown below)
+        // ..... More efficiently we can create a property (shown below) 
         
-        public DateTime Birthdate
+        //public DateTime Birthdate
+        //{
+        //    get { return _birthdate; }
+        //    set { _birthdate = value; }
+        //}
+
+        // ...... Or we can use Auto-implemented Properties 
+        public DateTime Birthdate {get; set;}
+
+        public int Age
         {
-            get { return _birthdate; }
-            set { _birthdate = value; }
+            get
+            {
+                var timeSpan = DateTime.Today - Birthdate;
+                var years = timeSpan.Days / 365;
+
+                return years;
+            }
         }
     }
 }
