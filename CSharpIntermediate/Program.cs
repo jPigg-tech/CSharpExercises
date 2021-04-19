@@ -7,8 +7,7 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            var person = new Person();
-            person.Birthdate = new DateTime(1992, 10, 5);
+            var person = new Person(new DateTime(1992, 10, 5)); 
             Console.WriteLine(person.Age);
             Console.ReadLine();
         }
