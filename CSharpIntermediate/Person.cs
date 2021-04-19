@@ -30,6 +30,13 @@ namespace CSharpIntermediate
 
         // ...... Or we can use Auto-implemented Properties 
         public DateTime Birthdate {get; private set;}
+        public string Name { get; set; }
+        public string  Username { get; set; }
+
+        public Person(DateTime birthdate)
+        {
+            Birthdate = birthdate;
+        }
 
         public int Age
         {
@@ -41,9 +48,7 @@ namespace CSharpIntermediate
                 return years;
             }
         }
-        public Person(DateTime birthdate)
-        {
-            Birthdate = birthdate; 
-        }
+        
+        
     }
 }
