@@ -19,5 +19,13 @@ namespace CSharpIntermediate
         {
             return _birthdate;
         }
+
+        // More efficiently we can create a property (shown below)
+        
+        public DateTime Birthdate
+        {
+            get { return _birthdate; }
+            set { _birthdate = value; }
+        }
     }
 }
