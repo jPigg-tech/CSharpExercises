@@ -6,21 +6,11 @@ namespace CSharpIntermediate
     class Program
     {
         static void Main(string[] args)
-        {            
-            var customer = new Customer(1);
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
-            customer.Id = 1;
-            customer.Name = "John";
-
-            var order = new Order();
-            customer.Orders.Add(order);
-
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
-            Console.WriteLine(customer.Orders.Count);
+        {
+            var person = new Person();
+            person.SetBirthdate(new DateTime(1992, 10, 5));
+            Console.WriteLine(person.GetBirthdate());
             Console.ReadLine();
-
         }
 
         static void UseOutKeywordExample()
@@ -85,15 +75,22 @@ namespace CSharpIntermediate
 
         static void CreateCustomer()
         {
-            //var customer = new Customer();
-            //customer.Id = 1;
-            //customer.Name = "John";
+            var customer = new Customer(1);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
+            customer.Id = 1;
+            customer.Name = "John";
 
-            //var order = new Order();
-            //customer.Orders.Add(order);
+            var order = new Order();
+            customer.Orders.Add(order);
 
-            //Console.WriteLine(customer.Id);
-            //Console.WriteLine(customer.Name);
+            Console.WriteLine(customer.Id);
+            Console.WriteLine(customer.Name);
+            Console.WriteLine(customer.Orders.Count);
+            Console.ReadLine();
+
+            // This was tested to show the importance of intansiating 
+            // a 'readonly' list in the Customer class
         }
     }
 }
