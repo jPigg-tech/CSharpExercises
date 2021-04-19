@@ -8,9 +8,17 @@ namespace CSharpIntermediate
         static void Main(string[] args)
         {
             var person = new Person();
-            person.SetBirthdate(new DateTime(1992, 10, 5));
-            Console.WriteLine(person.GetBirthdate());
+            person.Birthdate = new DateTime(1992, 10, 5);
+            Console.WriteLine(person.Age);
             Console.ReadLine();
+        }
+
+        static void CreateNewPersonUsingGetAndSetMethods()
+        {
+            //var person = new Person();
+            //person.SetBirthdate(new DateTime(1992, 10, 5));
+            //Console.WriteLine(person.GetBirthdate());
+            //Console.ReadLine();
         }
 
         static void UseOutKeywordExample()
