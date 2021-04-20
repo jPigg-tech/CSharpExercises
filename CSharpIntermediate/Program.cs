@@ -1,11 +1,31 @@
 ﻿
 using System;
+using System.Threading;
 
 namespace CSharpIntermediate
 {
     class Program
     {
         static void Main(string[] args)
+        {
+       
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+
+            for (int i = 0; i < 1000; i++)
+            {
+                Thread.Sleep(1);
+            }
+
+            stopwatch.Stop();
+
+            Console.WriteLine(stopwatch.Stop().ToString());
+            Console.ReadLine();
+            //Console.WriteLine(duration.TotalSeconds.ToString());
+        }
+
+        static void GetHttpCookieIndexer()
         {
             var cookie = new HttpCookie();
             cookie["name"] = "Jeff";

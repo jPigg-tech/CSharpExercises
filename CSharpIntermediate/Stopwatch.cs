@@ -9,17 +9,29 @@ namespace CSharpIntermediate
     class Stopwatch
     {
         private DateTime _start;
+        TimeSpan duration;
+        bool IsRunning;
 
 
         public void Start()
         {
+            if (IsRunning)
+            {
+                throw new InvalidOperationException("Cannot start: already running");
+            }
             _start = DateTime.Now;
+            IsRunning = true;
         }
 
-        public void Stop()
+        public TimeSpan Stop()
         {
-            TimeSpan duration = DateTime.Now - _start;
-            Console.WriteLine(duration.TotalSeconds.ToString());
+            if (!IsRunning)
+            {
+                throw new InvalidOperationException("Cannot stop: not running");
+            }
+            IsRunning = false;
+            duration = DateTime.Now - _start;
+            return duration;
         }
     }
 }
