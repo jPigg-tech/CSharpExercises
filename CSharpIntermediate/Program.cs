@@ -7,7 +7,14 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            var person = new Person(new DateTime(1992, 10, 5)); 
+            var cookie = new HttpCookie();
+            cookie["name"] = "Jeff";
+            Console.WriteLine(cookie["name"]);
+        }
+
+        static void GetAgeInYearsExample()
+        {
+            var person = new Person(new DateTime(1992, 10, 5));
             Console.WriteLine(person.Age);
             Console.ReadLine();
         }
