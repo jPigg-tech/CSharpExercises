@@ -11,6 +11,7 @@ namespace CSharpIntermediate
         // hash table makes searches really fast to look up an item by its key
 
         private readonly Dictionary<string, string> _dictionary;
+        public DateTime Expiry { get; set; }
         public HttpCookie()
         {
             _dictionary = new Dictionary<string, string>();                         
