@@ -9,8 +9,10 @@ namespace CSharpIntermediate
     class Stopwatch
     {
         private DateTime _start;
-        TimeSpan duration;
+        private TimeSpan _duration;
+        private DateTime _stop;
         bool IsRunning;
+
 
 
         public void Start()
@@ -23,15 +25,24 @@ namespace CSharpIntermediate
             IsRunning = true;
         }
 
-        public TimeSpan Stop()
+        public void Stop()
         {
             if (!IsRunning)
             {
                 throw new InvalidOperationException("Cannot stop: not running");
             }
             IsRunning = false;
-            duration = DateTime.Now - _start;
-            return duration;
+            _stop = DateTime.Now;            
+        }
+
+        public TimeSpan TimeElasped()
+        {
+            if (IsRunning)
+            {
+                return DateTime.Now - _start;
+            }
+            _duration = _stop - _start;
+            return _duration;
         }
     }
 }
