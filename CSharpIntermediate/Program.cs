@@ -8,9 +8,22 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
+            var dbMigrator = new DbMigrator(new Logger());
+
+            var logger = new Logger();
+            var installer = new Installer(logger);
+
+            dbMigrator.Migrate();
+
+            installer.Install();
+            Console.ReadLine();
+        }
+
+        static void ShowParentClassFields()
+        {
             var text = new Text();
             text.Width = 100;
-            text.Copy();            
+            text.Copy();
         }
 
         static void RunStopWatchClass()
@@ -26,7 +39,7 @@ namespace CSharpIntermediate
 
             stopwatch.Stop();
 
-            Console.WriteLine(stopwatch.Stop().ToString());
+            Console.WriteLine(stopwatch.TimeElasped().ToString());
             Console.ReadLine();
         }
 
