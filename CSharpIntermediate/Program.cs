@@ -8,7 +8,13 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-       
+            var text = new Text();
+            text.Width = 100;
+            text.Copy();            
+        }
+
+        static void RunStopWatchClass()
+        {
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
@@ -22,7 +28,6 @@ namespace CSharpIntermediate
 
             Console.WriteLine(stopwatch.Stop().ToString());
             Console.ReadLine();
-            //Console.WriteLine(duration.TotalSeconds.ToString());
         }
 
         static void GetHttpCookieIndexer()
