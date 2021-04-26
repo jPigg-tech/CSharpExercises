@@ -8,6 +8,17 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
+            Text text = new Text();
+            PresentationObject presentationObject = text;
+
+            text.Width = 200;
+            presentationObject.Width = 100;
+
+            Console.WriteLine(text.Width);
+        }
+
+        static void ShowComposition()
+        {
             var dbMigrator = new DbMigrator(new Logger());
 
             var logger = new Logger();
