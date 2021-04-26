@@ -13,5 +13,8 @@ namespace CSharpIntermediate
         {
             Console.WriteLine("Car is being initialized. {0}", registrationNumber);
         }
+
+        // Using the base keyword in the ctor lets you use the private readonly field from
+        // the Vehicle class. Is best practice for Encapsulation
     }
 }
