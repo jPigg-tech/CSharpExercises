@@ -8,6 +8,17 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
+            
+        }
+
+        static void ShowDowncasting()
+        {
+            PresentationObject presentationObject = new Text();
+            Text text = (Text)presentationObject;
+        }
+
+        static void ShowUpcasting()
+        {
             Text text = new Text();
             PresentationObject presentationObject = text;
 
