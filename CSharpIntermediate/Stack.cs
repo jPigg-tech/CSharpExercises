@@ -29,7 +29,7 @@ namespace CSharpIntermediate
                 throw new InvalidOperationException();
             }
 
-            for (int i = objs.Count - 1; i < 0; i--)
+            for (int i = objs.Count - 1; i >= 0; i--)
             {
                 popObj = objs[i];
                 objs.Remove(objs[i]);
@@ -41,7 +41,15 @@ namespace CSharpIntermediate
 
         public void Clear()
         {
+            if (objs.Count == 0)
+            {
+                Console.WriteLine("Stack is clear.");
+            }
 
+            for (int i = objs.Count - 1; i >= 0; i--)
+            {
+                objs.Remove(objs[i]);
+            }
         }
     }
 }
