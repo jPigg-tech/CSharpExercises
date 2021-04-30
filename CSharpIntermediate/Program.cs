@@ -8,6 +8,12 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
+            
+
+        }
+
+        static void TestingStackClass()
+        {
             var stack = new Stack();
             stack.Push(1);
             stack.Push(2);
@@ -20,7 +26,6 @@ namespace CSharpIntermediate
             stack.Push(23);
             Console.WriteLine(stack.Pop());
             Console.ReadLine();
-
         }
 
         static void ShowDowncasting()

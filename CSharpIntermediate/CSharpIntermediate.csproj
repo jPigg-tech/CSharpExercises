@@ -49,6 +49,7 @@
     <Compile Include="HttpCookie.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="MethodOverriding.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Point.cs" />
