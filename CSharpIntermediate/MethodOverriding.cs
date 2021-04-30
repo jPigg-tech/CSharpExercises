@@ -8,15 +8,19 @@ namespace CSharpIntermediate
 {
     class MethodOverriding
     {
-        public class Shape
+        public abstract class Shape
         {
             public int Width { get; set; }
             public int Height { get; set; }
 
-            public virtual void Draw()
-            {
+            public abstract void Draw();
 
-            }
+            // Changed the Shape class to abstract
+            //Use abstract when you want to provide some common behaviour
+            //while forcing other developers to follow your design
+            //(without the class being abstarct we can run into the 
+            // mistake of a developer deriving a class from Shape
+            // without implementing the draw method
         }
 
         public class Circle : Shape
