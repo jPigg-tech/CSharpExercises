@@ -11,5 +11,9 @@ namespace CSharpIntermediate
         public string ConnectionString { get; set; }
         public TimeSpan Timeout { get; set; }
 
+        public DbConnection(string connectionString)
+        {
+            this.ConnectionString = connectionString ?? throw new ArgumentNullException();
+        }
     }
 }
