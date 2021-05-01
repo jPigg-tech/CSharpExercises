@@ -8,7 +8,12 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            
+            var sqlConnection = new SqlConnection("Conenecting to SQL db");
+            var oracleConnection = new OracleConnection("Conenecting to Oracle db");
+            var dbCommand = new DbCommand(oracleConnection, "Instructions");
+
+            dbCommand.Execute();
+            Console.Read();
 
         }
 
