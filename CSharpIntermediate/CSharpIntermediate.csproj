@@ -45,6 +45,7 @@
     <Compile Include="Canvas.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="DbCommand.cs" />
     <Compile Include="DbConnection.cs" />
     <Compile Include="DbMigrator.cs" />
     <Compile Include="EncapsulationCustomer.cs" />
