@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpIntermediate
 {
-    class DbConnection
+    abstract class DbConnection
     {
         public string ConnectionString { get; set; }
         public TimeSpan Timeout { get; set; }
@@ -15,5 +15,9 @@ namespace CSharpIntermediate
         {
             this.ConnectionString = connectionString ?? throw new ArgumentNullException();
         }
+
+        public abstract void OpeningConnection();
+        public abstract void ClosingConnection();
+
     }
 }
