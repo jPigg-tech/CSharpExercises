@@ -21,6 +21,11 @@ namespace CSharpIntermediate
             //(without the class being abstarct we can run into the 
             // mistake of a developer deriving a class from Shape
             // without implementing the draw method
+
+            public void Copy()
+            {
+                Console.WriteLine("The shape is copied");
+            }
         }
 
         public class Circle : Shape
