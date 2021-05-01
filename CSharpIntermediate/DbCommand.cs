@@ -9,24 +9,17 @@ namespace CSharpIntermediate
     class DbCommand
     {
         
-        public DbCommand(DbConnection dbConnection)
+        public DbCommand(DbConnection dbConnection, string instruction)
         {
-            if (dbConnection == null)
+            if (dbConnection == null && instruction == null || instruction == "")
             {
                 throw new ArgumentNullException();
-            }
-            else if (dbConnection.ConnectionString == "SQL")
-            {
-                Console.WriteLine("Connecting you to the SQL database.");
-            }
-            else if (dbConnection.ConnectionString == "Oracle")
-            {
-                Console.WriteLine("Connecting you to the Oracle database.");
-            }
-            else
-            {
-                throw new ArgumentException();
-            }
+            }            
+        }
+
+        public void Execute()
+        {
+            
         }
 
 
