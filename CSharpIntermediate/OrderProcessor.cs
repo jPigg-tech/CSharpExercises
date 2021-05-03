@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpIntermediate
 {
-    class OrderProcessor
+    public class OrderProcessor
     {
         private readonly IShippingCalculator _shippingCalculator;
 
