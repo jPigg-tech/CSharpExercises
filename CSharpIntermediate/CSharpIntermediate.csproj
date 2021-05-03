@@ -55,6 +55,7 @@
     <Compile Include="MethodOverriding.cs" />
     <Compile Include="OracleConnection.cs" />
     <Compile Include="Order.cs" />
+    <Compile Include="OrderProcessor.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Post.cs" />

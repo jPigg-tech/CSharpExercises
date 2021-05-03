@@ -8,13 +8,16 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
+            
+        }
+        static void TestingDbCommandClassShowingPolymorphism()
+        {
             var sqlConnection = new SqlConnection("Conenecting to SQL db");
             var oracleConnection = new OracleConnection("Conenecting to Oracle db");
             var dbCommand = new DbCommand(oracleConnection, "Instructions");
 
             dbCommand.Execute();
             Console.Read();
-
         }
 
         static void TestingStackClass()
