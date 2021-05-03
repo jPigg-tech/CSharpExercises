@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharpIntermediate
 {
-    class ShippingCalculator
+    public interface IShippingCalculator
+    {
+        float CalculateShipping(Order order);
+    }
+    class ShippingCalculator : IShippingCalculator
     {
         public float CalculateShipping(Order order)
         {
