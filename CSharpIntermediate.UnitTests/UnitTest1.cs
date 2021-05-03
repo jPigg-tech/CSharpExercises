@@ -7,6 +7,18 @@ namespace CSharpIntermediate.UnitTests
     public class OrderProcessorTests
     { 
         // MethodName_Condition_Expectation
+        [TestMethod]
+        public void Process_OrderIsNotShipped_ShouldSetTheShipmentPropertyOfTheOrder()
+        {
+            var orderProcessor = new OrderProcessor(new FakeShippingCalculator());
+            var order = new Order();
+
+            orderProcessor.Process(order);
+
+            Assert.IsTrue(order.IsShipped);
+            Assert.AreEqual(1, order.Shipment.Cost);
+            Assert.AreEqual(DateTime.Today.AddDays(1), order.Shipment.ShippingDate);
+        }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
