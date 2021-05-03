@@ -19,12 +19,12 @@ namespace CSharpIntermediate
         {
             if (order.IsShipped)
             {
-                throw new InvalidOperationException("Ithis order is already processed")
+                throw new InvalidOperationException("Ithis order is already processed.");
             }
             order.Shipment = new Shipment
             {
                 Cost = _shippingCalculator.CalculateShipping(order),
-                _shippingDate = DateTime.Today.AddDays(1)
+                ShippingDate = DateTime.Today.AddDays(1)
             };
         }
     }
