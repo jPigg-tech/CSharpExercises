@@ -8,6 +8,11 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
+            
+        }
+
+        static void TestingInterfaces()
+        {
             var orderProcessor = new OrderProcessor(new ShippingCalculator());
             var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
             orderProcessor.Process(order);
